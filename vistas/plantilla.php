@@ -11,10 +11,10 @@
 	</head>
 	<body>
 		<head>
-			
+		
 		</head>
 		<main>
-			
+			<h1>Prueba controlador</h1>
 		</main>
 		<footer>
 			
