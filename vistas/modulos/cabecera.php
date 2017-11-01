@@ -1,4 +1,5 @@
 <a class="icon-menu" href="#"></a>
+
 <div id="menu">
 	<div class="fila top flex aling_center">
 		<div class="col-2">
@@ -44,9 +45,11 @@
 				<li><a href="#"><span class="icon-basket-alt"></span></a></li>
 				<span> | </span>
 				<li>
-					<a href="#"><span class="icon-search"></span></a>
+					 <input id="buscar" class="icon-search" type="text" name="search" placeholder="Search.."> 
+					<i class="icon-search"></i>
 				</li>
 			</ul>
 		</div>
 	</div>
 </div>
+

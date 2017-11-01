@@ -1,4 +1,3 @@
-/* Generales */
 * {
   box-sizing: border-box;
 }
@@ -186,7 +185,7 @@ img {
 	padding: 5px;
 	font-size: 1.5rem;
 	color: #f32a1c;
-	z-index: 1;
+	z-index: 10;
 	}
 
 }
@@ -263,6 +262,17 @@ img {
 	width: 223px;
 }
 
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+    width: 80%;
+}
+
 
 
 /* Desktops and laptops ----------- */
@@ -288,3 +298,4 @@ and (orientation : landscape) {
 		display: none;
 	}
 }
+
