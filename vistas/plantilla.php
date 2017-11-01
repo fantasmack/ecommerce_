@@ -8,6 +8,7 @@
 		<link rel="icon" href="vistas/img/favicon.png">
 		<link rel="stylesheet" href="vistas/css/reset.css">
 		<link rel="stylesheet" href="vistas/css/main.css">
+		<link rel="stylesheet" href="vistas/css/fontello.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
 	</head>
 	<body>

@@ -13,6 +13,7 @@ body {
   font-size: 1rem; /* equivale a 10px*/
   font-weight: 400;
   font-family: "Roboto", "Oxygen", sans-serif;
+  background: #fefefe;
 }
 /* Encabezados y parrafos incluir fuente roboto */
 h1,h2,h3,h4,h5,h6,p {
@@ -156,6 +157,7 @@ img {
   h4 { font-size: 1.424rem; }
   h5 { font-size: 1.266rem; }
   h6 { font-size: 1.125rem; }
+
 }
 
 /*Cuando la pantalla sea mas pequeña que 768px*/
@@ -171,34 +173,118 @@ img {
   .fila [class*=" col-"]:last-child {
     margin-bottom: 0;
   }
+
+  #menu{
+  	display: none;
+  }
+
+.icon-menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 5px;
+	font-size: 1.5rem;
+	color: #f32a1c;
+	z-index: 1;
+	}
+
+}
+
+
+/*Propios*/
+#menu{
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 1px 3px #c2c2c2;
 }
 
 .top {
 	align-items: center;
 	background-color: #f7f7f7;
-	height: 35px;
-	padding: 0 25px;
 	border-bottom: solid 1px  #EFEFEF;
 	color: #000;
-	font-weight: 600;
 	font-size: .85rem;
+	font-weight: 600;
+	height: 35px;
+	padding: 0 25px;
 }
 
 .top span {
 	padding: 0 5px;
 }
 
-.menu{
-	height: 45px;
-	border-bottom: solid 1px  #EFEFEF;
-	padding: 0 25px; 
+.top span:nth-child(1){
+	color: #f32a1c;
+}
+
+.menu {
+	border-bottom: solid 1px #EFEFEF;
+	height: 60px;
+	padding: 0 0 0 25px;
+	background-color: #fff;
+}
+
+.menu img{
+	width: 20%;
+	margin-top: 5px;
 }
 
 .navegacion {
-	letter-spacing: 1.5px;
 	font-size: .95rem;
+	letter-spacing: 1.5px;
+	flex-wrap: wrap;
 }
 
 .navegacion ul li{
 	margin-right: 10px;
+}
+
+.navegacion .flex{
+	flex-wrap: wrap;
+}
+
+.carro{
+	background-color: #f32a1c;
+	height: 60px;
+	position: relative;
+}
+
+.carro span{
+	line-height: 1;
+}
+
+.carro ul {
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	color: #fff;
+	font-size: 1.2rem;
+	width: 223px;
+}
+
+
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+.icon-menu {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding: 5px;
+	font-size: 1.5rem;
+	display: none;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	.icon-menu{
+		display: none;
+	}
 }
