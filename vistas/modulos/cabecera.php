@@ -30,7 +30,7 @@
 		<div class="col-8">
 			<nav class="navegacion">
 				<ul class="flex">
-					<li><a href="#">VISTAs</a></li>
+					<li><a href="#">VISTA</a></li>
 					<li><a href="#">SOLARES</a></li>
 					<li><a href="#">HOMBRE</a></li>
 					<li><a href="#">MUJER</a></li>
