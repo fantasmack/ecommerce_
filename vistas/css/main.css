@@ -194,7 +194,7 @@ img {
 
 /*CABECERA*/
 
-#menu{
+#wrap_menu{
 	position: fixed;
 	width: 100%;
 	box-shadow: 0 1px 3px #c2c2c2;
@@ -243,12 +243,17 @@ img {
 	font-size: .95rem;
 	letter-spacing: 1.5px;
 	flex-wrap: wrap;
+
 }
 
 .navegacion ul li {
   margin-right: 10px;
   border-right: 1px solid #f32a1c;
   padding-right: 10px;
+}
+
+.navegacion ul li a{
+  text-transform: uppercase;
 }
 
 .navegacion ul li:nth-child(7) {
