@@ -1,5 +1,4 @@
 <a class="icon-menu" href="#"></a>
-
 <div id="menu">
 	<div class="fila top flex aling_center">
 		<div class="col-2">
@@ -39,15 +38,67 @@
 					<li><a href="#">CONTACTO</a></li>
 				</ul>
 			</nav>
+
 		</div>
 		<div class="col-2 carro flex">
 			<ul class="flex">
-				<li><a href="#"><span class="icon-basket-alt"></span></a></li>
+				<li><a href="#"><span class="icon-shop"></span></a></li>
 				<span> | </span>
 				<li>
-					 <input id="buscar" class="icon-search" type="text" name="search" placeholder="Search.."> 
-					<i class="icon-search"></i>
+					<div id="buscar">
+						<form action="">
+							<input id="search" name="search" type="text" placeholder="Que estas buscando ?">
+							<input id="search_submit" value="" type="submit">
+						</form>
+					</div>
 				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="btncategorias">
+	<span class="icon-down-dir" onclick="toggle('categorias');"></span>
+</div>
+<div id="categorias">
+	<div class="contenedor flex j_space">
+		<div class="col-4">
+			<h1>Categoria</h1>
+			<ul>
+				<li><a href="#">Categoria 1</a></li>
+				<li><a href="#">Categoria 2</a></li>
+				<li><a href="#">Categoria 3</a></li>
+				<li><a href="#">Categoria 4</a></li>
+				<li><a href="#">Categoria 5</a></li>
+			</ul>
+		</div>
+		<div class="col-4">
+			<h1>Categoria</h1>
+			<ul>
+				<li><a href="#">Categoria 1</a></li>
+				<li><a href="#">Categoria 2</a></li>
+				<li><a href="#">Categoria 3</a></li>
+				<li><a href="#">Categoria 4</a></li>
+				<li><a href="#">Categoria 5</a></li>
+			</ul>
+		</div>
+		<div class="col-4">
+			<h1>Categoria</h1>
+			<ul>
+				<li><a href="#">Categoria 1</a></li>
+				<li><a href="#">Categoria 2</a></li>
+				<li><a href="#">Categoria 3</a></li>
+				<li><a href="#">Categoria 4</a></li>
+				<li><a href="#">Categoria 5</a></li>
+			</ul>
+		</div>
+		<div class="col-4">
+			<h1>Categoria</h1>
+			<ul>
+				<li><a href="#">Categoria 1</a></li>
+				<li><a href="#">Categoria 2</a></li>
+				<li><a href="#">Categoria 3</a></li>
+				<li><a href="#">Categoria 4</a></li>
+				<li><a href="#">Categoria 5</a></li>
 			</ul>
 		</div>
 	</div>
