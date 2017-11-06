@@ -216,8 +216,16 @@ img {
 	padding: 0 5px;
 }
 
+.top [class="flex"] li{
+  padding-right: 5px;
+}
+
 .top span:nth-child(1){
 	color: #f32a1c;
+}
+
+.top div:last-child ul li{
+padding-left: 5px;
 }
 
 .menu {
