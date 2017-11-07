@@ -1,3 +1,4 @@
+
 <a class="icon-menu" href="#"></a>
 <div id="wrap_menu">
 	<div class="fila top flex aling_center">
@@ -6,6 +7,15 @@
 				<span class="icon-globe"></span>
 				<li><a href="#">En |</a></li>
 				<li><a href="#"> Es</a></li>
+				<?php 
+					//Editar las redes sociales
+						$social= ControladorPlantilla::ctrEstiloPlantilla();
+						$jsonRedes = json_decode($social["redes_sociales"],true);
+						foreach ($jsonRedes as $key => $value) {
+						echo '<li><a class="'.$value["red"].'" href="'.$value["url"].'" target="_blank"></a></li>';
+						}
+			 		//Editar las redes sociales
+			 	?>
 			</ul>
 		</div>
 		<div class="col-8">
@@ -21,7 +31,7 @@
 	<div class="fila menu flex align_center">
 		<div class="col-2">
 			<a href="#">
-				<img src="vistas/img/plantilla/logo.svg" width="43" alt="tienda">
+				<img src="http://localhost:8085/ecommerce_/<?php echo $social["logo"] ?>" width="43" alt="tienda">
 			</a>
 		</div>
 		<div class="col-8">

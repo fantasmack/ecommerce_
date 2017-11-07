@@ -1,5 +1,4 @@
  // Seccion categorias
-
  function toggle(id) {
 
        var divelement = document.getElementById(id);
