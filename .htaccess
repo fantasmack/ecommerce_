@@ -1,0 +1,9 @@
+# impide el listado de contenidos
+
+Options All -Indexes
+
+#URL's
+
+RewriteEngine On
+
+RewriteRule ^([-a-zA-Z0-9/]+)$ index.php?ruta=$1

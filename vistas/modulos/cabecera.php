@@ -69,46 +69,22 @@
 </div>
 <div id="categorias">
 	<div class="contenedor flex j_space">
-		<div class="col-4">
-			<h3>Categoria</h1>
-			<ul>
-				<li><a href="#">Categoria 1</a></li>
-				<li><a href="#">Categoria 2</a></li>
-				<li><a href="#">Categoria 3</a></li>
-				<li><a href="#">Categoria 4</a></li>
-				<li><a href="#">Categoria 5</a></li>
-			</ul>
-		</div>
-		<div class="col-4">
-			<h3>Categoria</h1>
-			<ul>
-				<li><a href="#">Categoria 1</a></li>
-				<li><a href="#">Categoria 2</a></li>
-				<li><a href="#">Categoria 3</a></li>
-				<li><a href="#">Categoria 4</a></li>
-				<li><a href="#">Categoria 5</a></li>
-			</ul>
-		</div>
-		<div class="col-4">
-			<h3>Categoria</h1>
-			<ul>
-				<li><a href="#">Categoria 1</a></li>
-				<li><a href="#">Categoria 2</a></li>
-				<li><a href="#">Categoria 3</a></li>
-				<li><a href="#">Categoria 4</a></li>
-				<li><a href="#">Categoria 5</a></li>
-			</ul>
-		</div>
-		<div class="col-4">
-			<h3>Categoria</h1>
-			<ul>
-				<li><a href="#">Categoria 1</a></li>
-				<li><a href="#">Categoria 2</a></li>
-				<li><a href="#">Categoria 3</a></li>
-				<li><a href="#">Categoria 4</a></li>
-				<li><a href="#">Categoria 5</a></li>
-			</ul>
-		</div>
+		<?php 
+			$categorias = ControladorProductos::ctrMostrarCategorias();
+			foreach ($categorias as $key => $value) {
+				echo 
+				'<div class="col-4">
+				<a href="'.$value["ruta"].'"><h3>'.$value["categoria"].'</h3></a> 
+				<ul>';
+				$subcategorias = ControladorProductos::ctrMostrarSubcategorias($value["id"]);
+
+				foreach ($subcategorias as $key => $value) {
+					echo '<li><a href="'.$value["ruta"].'">'.$value['subcategoria'].'</a></li>';
+				}
+					echo'</ul>
+				</div>';
+			}
+		?>
 	</div>
 </div>
 

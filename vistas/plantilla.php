@@ -7,24 +7,33 @@
 		<meta name="description" content="Descripción del sitio">
 		<?php $favicon = ControladorPlantilla::ctrEstiloPlantilla();
 			echo '<link rel="icon" href="http://localhost/ecommerce_/'.$favicon["favicon"].'">';
+			$url = Ruta::ctrRuta();
 		 ?>
-		<link rel="stylesheet" href="vistas/css/reset.css">
-		<link rel="stylesheet" href="vistas/css/main.css">
-		<link rel="stylesheet" href="vistas/css/fontello.css">
+		<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/reset.css">
+		<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/main.css">
+		<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/fontello.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	</head>
 	<body>
 		<header>
-			<?php include "vistas/modulos/cabecera.php"; ?>
+			<?php include "vistas/modulos/cabecera.php";?>
 		</header>
 		<main>
-			
+			<?php 		
+				$rutas = array();
+					if(isset($_GET["ruta"])){
+						$rutas = explode("/",$_GET["ruta"]);
+
+						$rutaCategorias = ControladorPlantilla
+				} 
+
+			?>
 		</main>
 		<footer>
 			
 		</footer>
-		<script src="vistas/js/jquery.js"></script>
-		<script src="vistas/js/main.js"></script>
-		<script src="vistas/js/plantilla.js"></script>
+		<script src="<?php echo $url; ?>vistas/js/jquery.js"></script>
+		<script src="<?php echo $url; ?>vistas/js/main.js"></script>
+		<script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>
 	</body>
 </html>
