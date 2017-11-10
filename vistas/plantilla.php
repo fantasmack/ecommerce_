@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta name="description" content="Descripción del sitio">
 	<?php $favicon = ControladorPlantilla::ctrEstiloPlantilla();
-	echo '<link rel="icon" href="http://localhost/ecommerce_/'.$favicon["favicon"].'">';
+		echo '<link rel="icon" href="http://localhost/ecommerce_/'.$favicon["favicon"].'">';
 	$url = Ruta::ctrRuta();
 	?>
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/reset.css">
@@ -45,7 +45,7 @@ if(isset($_GET["ruta"])){
 	}else{
 		include "modulos/error404.php";
 	}
-	}
+}
 	?>
 	</header>
 	<main>

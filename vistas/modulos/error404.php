@@ -1,5 +1,5 @@
 <div id="error" class="fila">
-	<div class="container">
-		<h1>error</h1>
+	<div class="contenedor col-12">
+		<h1>Error</h1>
 	</div>
 </div>
