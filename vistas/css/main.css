@@ -195,7 +195,7 @@ img {
 /*CABECERA*/
 
 #wrap_menu{
-	position: fixed;
+	position: relative;
 	width: 100%;
 	box-shadow: 0 1px 3px #c2c2c2;
   z-index: 55;
@@ -216,7 +216,12 @@ img {
 	padding: 0 5px;
 }
 
-.top [class="flex"] li {
+.top [class="flex"] li:nth-child(1){
+  color: #f32a1c;
+  padding-right: 5px;
+}
+
+.top [class="flex"] li{
   padding-right: 5px;
   color: #737373;
 }
@@ -301,6 +306,31 @@ li a[class*="icon-"]:hover{
 	width: 223px;
 }
 
+.carro .icon-shop{
+    color: #fff;
+    font-size: 23px;
+}
+
+.carro > ul li{
+
+} 
+
+.narticulos{
+
+  position: absolute;
+  left: 0;
+  margin-left: 50px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
 #buscar input[type="text"] {
   height: 60px;
   font-size: 1rem;
@@ -330,8 +360,8 @@ li a[class*="icon-"]:hover{
 
 }
 #buscar input[type="submit"] {
-  width: 23px;
-  height: 23px;
+  width: 22px;
+  height: 22px;
   background-image: url('../img/plantilla/buscar.svg');
   background-position: center;
   background-repeat: no-repeat;
@@ -344,18 +374,25 @@ li a[class*="icon-"]:hover{
 }
 
 #btncategorias {
-  position: absolute;
-  padding-top: 78px;
+  position: fixed;
   width: 100%;
   text-align: center;
   color: red;
   font-size: 25px;
+  z-index: 15;
+  margin-top: -17px;
+}
+
+#btncategorias span{
   cursor: pointer;
 }
 
 #categorias{
-  padding-top: 120px;
+  padding-top: 20px;
   display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
 }
 
 #categorias ul:nth-child(even) {

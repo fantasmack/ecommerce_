@@ -1,21 +1,33 @@
-<?php 
+<?php
 
-	class ControladorProductos{
+class ControladorProductos{
 
-		static public function ctrMostrarCategorias(){
+	/*=============================================
+	MOSTRAR CATEGORÍAS
+	=============================================*/
 
-			$tabla = "categorias";
-			$respuesta = ModeloProductos::mdlMostrarCategorias($tabla);
+	static public function ctrMostrarCategorias($item, $valor){
 
-			return $respuesta;
-		}
+		$tabla = "categorias";
 
-	
-			static public function ctrMostrarSubCategorias($id){
+		$respuesta = ModeloProductos::mdlMostrarCategorias($tabla, $item, $valor);
 
-			$tabla = "subcategorias";
-			$respuesta = ModeloProductos::mdlMostrarSubCategorias($tabla, $id);
+		return $respuesta;
 
-			return $respuesta;
-		}
 	}
+
+	/*=============================================
+	MOSTRAR SUBCATEGORÍAS
+	=============================================*/
+
+	static public function ctrMostrarSubCategorias($item, $valor){
+
+		$tabla = "subcategorias";
+
+		$respuesta = ModeloProductos::mdlMostrarSubCategorias($tabla, $item, $valor);
+
+		return $respuesta;
+
+	}
+
+}

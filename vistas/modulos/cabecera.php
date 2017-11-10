@@ -4,7 +4,7 @@
 	<div class="fila top flex aling_center">
 		<div class="col-2">
 			<ul class="flex">
-				<span class="icon-globe"></span>
+				<li class="icon-globe"></li>
 				<li><a href="#">En |</a></li>
 				<li><a href="#"> Es</a></li>
 				<?php 
@@ -49,12 +49,13 @@
 
 		</div>
 		<div class="col-2 carro flex">
+			<label class="narticulos">2</label>
 			<ul class="flex">
-				<li><a href="#"><span class="icon-shop"></span></a></li>
-				<span> | </span>
+				<li><a class="icon-shop" href="#"></a></li>
+				<li> | </li>
 				<li>
 					<div id="buscar">
-						<form action="">
+						<form action="#">
 							<input id="search" name="search" type="text" placeholder="Que estas buscando ?">
 							<input id="search_submit" value="" type="submit">
 						</form>
@@ -69,14 +70,19 @@
 </div>
 <div id="categorias">
 	<div class="contenedor flex j_space">
-		<?php 
-			$categorias = ControladorProductos::ctrMostrarCategorias();
+		<?php
+			$item = null;
+			$valor = null;
+
+			$categorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
+			
 			foreach ($categorias as $key => $value) {
-				echo 
-				'<div class="col-4">
+				echo '<div class="col-4">
 				<a href="'.$value["ruta"].'"><h3>'.$value["categoria"].'</h3></a> 
 				<ul>';
-				$subcategorias = ControladorProductos::ctrMostrarSubcategorias($value["id"]);
+				$item = "id_categoria";
+				$valor = $value["id"];
+				$subcategorias = ControladorProductos::ctrMostrarSubcategorias($item, $valor);
 
 				foreach ($subcategorias as $key => $value) {
 					echo '<li><a href="'.$value["ruta"].'">'.$value['subcategoria'].'</a></li>';
