@@ -15,7 +15,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-	<header>
+
 		<?php include "modulos/cabecera.php";
 /*CONTENIDO DINÁMICO */
 
@@ -45,9 +45,11 @@ if(isset($_GET["ruta"])){
 	}else{
 		include "modulos/error404.php";
 	}
-}
+	}else{
+		include "modulos/slide.php";
+	}
 	?>
-	</header>
+
 	<main>
 
 	</main>

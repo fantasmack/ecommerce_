@@ -8,7 +8,5 @@ class ModeloPlantilla{
 		$stmt -> execute();
 		return $stmt -> fetch();
 		$stmt -> close();
-
 	}
-
 }

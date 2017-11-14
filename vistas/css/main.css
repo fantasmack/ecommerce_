@@ -195,7 +195,7 @@ img {
 /*CABECERA*/
 
 #wrap_menu{
-	position: relative;
+	position: fixed;
 	width: 100%;
 	box-shadow: 0 1px 3px #c2c2c2;
   z-index: 55;
@@ -374,25 +374,28 @@ li a[class*="icon-"]:hover{
 }
 
 #btncategorias {
-  position: fixed;
+  position: absolute;
   width: 100%;
   text-align: center;
   color: red;
   font-size: 25px;
   z-index: 15;
-  margin-top: -17px;
+  margin-top: 79px;
 }
 
 #btncategorias span{
   cursor: pointer;
 }
 
-#categorias{
-  padding-top: 20px;
+#categorias {
+  padding-top: 110px;
   display: none;
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   width: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+  box-shadow: 0 1px 3px #c2c2c2;
 }
 
 #categorias ul:nth-child(even) {
@@ -407,6 +410,40 @@ li a[class*="icon-"]:hover{
 }
 
 
+/*slider*/
+
+.capa {
+  height: 100%;
+  background-color: #f32a1c;
+  width: 19%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+#slide {
+  position: relative;
+  height: 100vh;
+}
+
+#slide > div li img {
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#slide ul {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.capa{
+  display: none;
+}
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
