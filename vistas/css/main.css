@@ -22,12 +22,12 @@ h1,h2,h3,h4,h5,h6,p {
 }
 h1,h2,h3,h4,h5,h6 { font-weight: 500; }
 h1 {
-  font-size: 1.35rem;
+  font-size: 3rem;
   line-height: 1.2;
 }
 h2 {
-  font-size: 2.488rem;
-  line-height: 1.25;
+  font-size: 1rem;
+  /* line-height: 1.25; */
 }
 h3 {
   font-size: 1rem;
@@ -421,29 +421,67 @@ li a[class*="icon-"]:hover{
   opacity: 0.9;
 }
 
-#slide {
-  position: relative;
+#slide, .slide1 {
+  position: absolute;
   height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.slide2{
+  position: absolute;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 #slide > div li img {
-  width: auto;
+  max-width: 532px;
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
 #slide ul {
-  width: 90%;
+  width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute;
+  top: 0;
 }
 
-.capa{
-  display: none;
+#slide ul li{
+  width: 50%;
 }
+
+.descripcion {
+  position: relative;
+}
+
+.descripcion span{
+  background-color: #f32a1c;;
+  width: auto;
+  padding: 3px;
+  color: #fff;
+}
+
+.descripcion h1 {
+  text-transform: uppercase;
+  font-weight: 600;
+   margin-top: 10px;
+}
+
+
+
+.descripcion button {
+  width: auto;
+  background-color: transparent;
+  color: #f32a1c;
+  border: 2px solid #f32a1c;
+  padding: .5rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
 /* Desktops and laptops ----------- */
 @media only screen 
 and (min-width : 1224px) {
