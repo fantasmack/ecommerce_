@@ -207,18 +207,12 @@ img {
 	border-bottom: solid 1px  #EFEFEF;
 	color: #191919;
 	font-size: .85rem;
-	font-weight: 600;
 	height: 35px;
 	padding: 0 25px;
 }
 
 .top span {
 	padding: 0 5px;
-}
-
-.top [class="flex"] li:nth-child(1){
-  color: #f32a1c;
-  padding-right: 5px;
 }
 
 .top [class="flex"] li{
@@ -377,7 +371,7 @@ li a[class*="icon-"]:hover{
   position: absolute;
   width: 100%;
   text-align: center;
-  color: red;
+  color: #f32a1c;
   font-size: 25px;
   z-index: 15;
   margin-top: 79px;
@@ -410,77 +404,122 @@ li a[class*="icon-"]:hover{
 }
 
 
-/*slider*/
+/*SLIDER*/
 
-.capa {
-  height: 100%;
-  background-color: #f32a1c;
-  width: 19%;
-  position: absolute;
-  z-index: 1;
-  opacity: 0.9;
-}
 
-#slide, .slide1 {
-  position: absolute;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.slide2{
-  position: absolute;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-#slide > div li img {
-  max-width: 532px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-#slide ul {
+#slider {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
-  top: 0;
+  overflow: hidden;
+  background-color: #f8f7fd;
 }
 
-#slide ul li{
-  width: 50%;
+.slides{
+  width:400%;
+  height:100%;
+  position:relative;
+  animation:slide 30s infinite;
 }
 
-.descripcion {
-  position: relative;
+.slides:hover {
+  animation-play-state: paused;
 }
 
-.descripcion span{
-  background-color: #f32a1c;;
-  width: auto;
-  padding: 3px;
-  color: #fff;
+.slider{
+  width:25%;
+  height:100%;
+  float:left;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.slider img{
+  width:57%;
+  height:100%;
 }
 
-.descripcion h1 {
-  text-transform: uppercase;
-  font-weight: 600;
-   margin-top: 10px;
-}
-
-
-
-.descripcion button {
-  width: auto;
-  background-color: transparent;
-  color: #f32a1c;
-  border: 2px solid #f32a1c;
+.slider button {
+  border: 1px solid red;
   padding: .5rem;
   margin-top: 10px;
   text-transform: uppercase;
+  background-color: transparent;
+  color: red;
 }
+
+/* Mascara */
+.mascara {
+  position: absolute;
+  background-color: rgba(243, 0, 1, 0.75);
+  width: 30%;
+  height: 100%;
+}
+
+/* Descripcion */
+.descripcion {
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.texto {
+  position: relative;
+  top: 300px;
+  width: 330px;
+  text-align: justify;
+}
+
+.texto h1 {
+  font-size: 40px;
+  color: #333;
+  text-align: left;
+  margin-left: 0px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+
+.texto h2 {
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+  text-align: justify;
+  margin-left: 0;
+}
+
+@keyframes slide{
+  0%,100%{
+    margin-left:0%;
+  }
+  21%{
+    margin-left:0%;
+  }
+  25%{
+    margin-left:-100%;
+  }
+  46%{
+    margin-left:-100%;
+  }
+  50%{
+    margin-left:-200%;
+  }
+  71%{
+    margin-left:-200%;
+  }
+  75%{
+    margin-left:-300%;
+  }
+  96%{
+    margin-left:-300%;
+  }
+}
+
+
+
+
 
 /* Desktops and laptops ----------- */
 @media only screen 

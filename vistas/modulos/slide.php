@@ -1,54 +1,28 @@
-<div class="fila" id="slide">
-	<div class="col-10">
-		<ul>
-			<div class="slide1">
-				<!-- Slider 1 -->
-				<li>
-					<img width="150" src="vistas/img/plantilla/lentes.jpg" alt="">
-				</li>
-				
-				<li>
-					<div class="descripcion">
-						<span>Categoria</span>	
-						<hgroup>
-							<h1>Supreme/Black</h1>
-							<h2>
-								Lentes bien padrotes creados  con el mismisimo martillo de Tor,
-								con mica blindada nivel 6 para aguantar pinshis balazos !!...
-								Pium pium !! 
-							</h2>
-						</hgroup>
-						<button>Ir Producto</button>
-					</div>
-				</li>
-			</div>
-			<!-- Slider 2 -->
-			<div class="slide2">			
-				<li>
-					<img width="150" src="vistas/img/plantilla/lentes_2.jpg" alt="">
-				</li>
-				
-				<li>
-					<div class="descripcion">
-						<span>Categoria 2</span>	
-						<hgroup>
-							<h1>Supreme/White</h1>
-							<h2>
-								Lentes bien padrotes creados  con el mismisimo martillo de Tor,
-								con mica blindada nivel 6 para aguantar pinshis balazos !!...
-								Pium pium !! 
-							</h2>
-						</hgroup>
-						<button>Ir Producto</button>
-					</div>
-				</li>
-			</div>
+<div class="fila col-10">
+	<div id="slider">
+		<div class="slides">
+			<?php 
+			$slide = ControladorSlide::ctrMostrarSlide();
+			foreach ($slide as $key => $value) {
 
-
-
-		</ul>
+				echo '
+				<ul class="slider">
+				<li class="mascara"></li>
+				<li class="descripcion">
+				<ul class="texto">
+				<li><h1>'.$value["titulo"].'</h1></li>
+				<li><h2>'.$value["descripcion"].'</h2></li>
+				<li><a href="'.$value["url"].'"><button>Ver producto</button></a></li>
+				</ul>
+				</li>
+				<li class="image"><img width="409" src="http://localhost:8085/ecommerce_/'.$value["img"].'"></li>
+				</ul>';
+			}
+			?>
+		</div>
 	</div>
 	<div class="col-2">
 		
 	</div>
 </div>
+
