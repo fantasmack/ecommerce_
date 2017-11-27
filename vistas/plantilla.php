@@ -5,8 +5,10 @@
 	<title>Proyecto Ecommerce</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<meta name="description" content="Descripción del sitio">
-	<?php $favicon = ControladorPlantilla::ctrEstiloPlantilla();
-		echo '<link rel="icon" href="http://localhost/ecommerce_/'.$favicon["favicon"].'">';
+	<?php 
+	$servidor = Ruta::ctrRutaServidor();
+	$favicon = ControladorPlantilla::ctrEstiloPlantilla();
+	echo '<link rel="icon" href="'.$servidor.$favicon["favicon"].'">';
 	$url = Ruta::ctrRuta();
 	?>
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/reset.css">
@@ -16,43 +18,39 @@
 </head>
 <body>
 
-		<?php include "modulos/cabecera.php";
-/*CONTENIDO DINÁMICO */
+	<?php include "modulos/cabecera.php";
+	/*CONTENIDO DINÁMICO */
 
-$rutas = array();
-$ruta = null;
+	$rutas = array();
+	$ruta = null;
 
-if(isset($_GET["ruta"])){
-	$rutas = explode("/", $_GET["ruta"]);
-	$item = "ruta";
-	$valor =  $rutas[0];
-	/* URL'S AMIGABLES DE CATEGORÍAS */
-	$rutaCategorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
-	if($rutas[0] == $rutaCategorias["ruta"]){
-		$ruta = $rutas[0];
-	}
-
-	/* URL'S AMIGABLES DE SUBCATEGORÍAS */
-
-	$rutaSubCategorias = ControladorProductos::ctrMostrarSubCategorias($item, $valor);
-	foreach ($rutaSubCategorias as $key => $value) {
-		if($rutas[0] == $value["ruta"]){
+	if(isset($_GET["ruta"])){
+		$rutas = explode("/", $_GET["ruta"]);
+		$item = "ruta";
+		$valor =  $rutas[0];
+		/* URL'S AMIGABLES DE CATEGORÍAS */
+		$rutaCategorias = ControladorProductos::ctrMostrarCategorias($item, $valor);
+		if($rutas[0] == $rutaCategorias["ruta"]){
 			$ruta = $rutas[0];
 		}
-	}
-	if($ruta != null){
-		include "modulos/productos.php";
-	}else{
-		include "modulos/error404.php";
-	}
+
+		/* URL'S AMIGABLES DE SUBCATEGORÍAS */
+
+		$rutaSubCategorias = ControladorProductos::ctrMostrarSubCategorias($item, $valor);
+		foreach ($rutaSubCategorias as $key => $value) {
+			if($rutas[0] == $value["ruta"]){
+				$ruta = $rutas[0];
+			}
+		}
+		if($ruta != null){
+			include "modulos/productos.php";
+		}else{
+			include "modulos/error404.php";
+		}
 	}else{
 		include "modulos/slide.php";
 	}
 	?>
-
-	<main>
-
-	</main>
 	<footer>
 
 	</footer>

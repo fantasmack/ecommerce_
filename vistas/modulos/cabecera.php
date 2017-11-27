@@ -1,3 +1,9 @@
+<?php 
+
+	$servidor = Ruta::ctrRutaServidor();
+	
+ ?>
+
 <header>
 <a class="icon-menu" href="#"></a>
 <div id="wrap_menu">
@@ -31,12 +37,13 @@
 	<div class="fila menu flex align_center">
 		<div class="col-2">
 			<a href="#">
-				<img src="http://localhost:8085/ecommerce_/<?php echo $social["logo"] ?>" width="43" alt="tienda">
+				<img src="<?php echo $servidor.$social["logo"] ?>" width="43" alt="tienda">
 			</a>
 		</div>
 		<div class="col-8">
 			<nav class="navegacion">
 				<ul class="flex">
+					<li><a href="#"><a href="#"><i class="home"></i></a></li>
 					<li><a href="#" title="Vista">Vista</a></li>
 					<li><a href="#" title="Solares">Solares</a></li>
 					<li><a href="#" title="Hombre">Hombre</a></li>

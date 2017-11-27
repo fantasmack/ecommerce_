@@ -224,9 +224,7 @@ li a[class*="icon-"]{
   color: #737373;
 }
 
-li a[class*="icon-"]:hover{
-  color: #f32a1c;
-}
+
 
 .top span:nth-child(1){
 	color: #f32a1c;
@@ -294,10 +292,9 @@ li a[class*="icon-"]:hover{
 .carro ul {
 	justify-content: space-around;
 	align-items: center;
-	width: 100%;
 	color: #fff;
 	font-size: 1.2rem;
-	width: 223px;
+	width: 100%;
 }
 
 .carro .icon-shop{
@@ -377,7 +374,9 @@ li a[class*="icon-"]:hover{
   margin-top: 79px;
 }
 
-#btncategorias span{
+
+
+#btncategorias i{
   cursor: pointer;
 }
 
@@ -415,6 +414,11 @@ li a[class*="icon-"]:hover{
   background-color: #f8f7fd;
 }
 
+#slider:hover, article:hover{
+  background-image: url('http://localhost:8085/bck_ecommerce_/vistas/img/productos/vignette.png');
+  background-size: cover;
+}
+
 .slides{
   width:400%;
   height:100%;
@@ -422,8 +426,8 @@ li a[class*="icon-"]:hover{
   animation:slide 30s infinite;
 }
 
-.slides:hover {
-  animation-play-state: paused;
+#slides:hover{
+   animation-play-state: paused;
 }
 
 .slider{
@@ -453,7 +457,7 @@ li a[class*="icon-"]:hover{
   position: absolute;
   background-color: rgba(243, 0, 1, 0.75);
   width: 30%;
-  height: 100%;
+  height: 809px;
 }
 
 /* Descripcion */
@@ -517,21 +521,102 @@ li a[class*="icon-"]:hover{
   }
 }
 
+#destacados {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  padding-top: 100px;
+  background-color: #fff;
+  height: 100%;
+  overflow: scroll;
+  border-left: 1px solid #EFEFEF;
+}
+
+#destacados h2{
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#destacados article {
+  height: auto;
+  border-bottom: 1px solid #DBD7D7;
+  padding: 5px;
+  text-align: center;
+}
+
+#destacados article p {
+  font-size: 14px;
+}
+#destacados img{ width: 70%; }
+
+#destacados button {
+  border: 1px solid red;
+  text-transform: uppercase;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+}
 
 
-
-
-/* Desktops and laptops ----------- */
+/* Smartphones (portrait and landscape) ----------- */
 @media only screen 
-and (min-width : 1224px) {
-.icon-menu {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	padding: 5px;
-	font-size: 1.5rem;
-	display: none;
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	#wrap_menu, #btncategorias, #destacados { display: none; }
+	#slider{
+    margin-top: 50px;
+    height: auto;
+    position: relative;
+  }
+	.texto h1 {font-size: 20px;}
+	.descripcion { width: 100%;	}
+	.texto {
+		top: 0;
+		padding-right: 15px;
+	}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 320px) {
+	.texto {
+		position: relative;
+		width: 305px;
+		text-align: justify;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+	.texto { 
+		top: 0;
+		width: 160px;
+		padding-right: 5px;
+		text-align: center;
+	}
+	.texto h2 {
+	height: 90px;
+	overflow: hidden;
+}
+	.mascara {	height: 182px;	}
+	.slider button {
+		padding: .1rem;
+		margin-top: 23px;
+	}
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	.top, .icon-menu, #destacados{ display: none; }
+	.descripcion { width: 100%; }
+	.texto {
+		width: 350px;
+		padding-right: 25px;
 	}
 }
 
@@ -540,14 +625,69 @@ and (min-width : 1224px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-	.icon-menu{
-		display: none;
-	}
+.menu img { width: 25%; }
+.narticulos { margin-left: 40px; }
+#btncategorias { margin-top: 45px; }
+#categorias { padding-top: 70px; }
+.slider img { width: 75%; }
+#destacados{ display: none; }
+
 }
 
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	#wrap_menu { position: relative; }
+	.menu{ padding: 0;}
+	#categorias{ padding-top: 10px; }
+	.menu img, .carro { display: none; }
+	#btncategorias { margin-top: -17px; }
+	.navegacion ul li a, #categorias h3 {
+		text-align: center;
+		font-size: .95rem;
+	}
+	.mascara { height: 438px; }
+	.texto { top: 150px; }
+	.texto h1 { font-size: 30px; }
+}
 
-@media (max-width: 1600px) {
-  .menu{
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+.icon-menu{ display: none; }
 
-  }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+.top { font-size: .95rem; }
+.navegacion { font-size: 1rem; }
+.icon-menu{ display: none; }
+.carro {
+	background-color: #f32a1c;
+	height: 80px;
+	position: relative;
+}
+#buscar input[type="text"] { height: 80px; }
+#btncategorias { margin-top: 100px; }
+#categorias { padding-top: 130px; }
+.narticulos { margin: 20px 0 0 65px; }
+.texto { width: 400px; }
+.texto h1 { font-size: 50px; }
+.texto h2 { font-size: 17px; }
+.texto { top: 300px;}
+.mascara{height:100%;}
+#destacados {
+  padding-top: 130px;
+}
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
