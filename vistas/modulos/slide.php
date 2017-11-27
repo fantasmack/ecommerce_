@@ -38,8 +38,8 @@
 		</article>	
 		<article>
 			<ul>
-				<li><h2>Nerdos</h2></li>
-				<li><img src="http://localhost:8085/bck_ecommerce_/vistas/img/productos/destacado_1.png" alt=""></li>
+				<li><h2>La Abue</h2></li>
+				<li><img src="http://localhost:8085/bck_ecommerce_/vistas/img/productos/destacado_2.png" alt=""></li>
 				<li><p>Estos son los mismisimos de Clark Kent</p></li>
 				<li><a href="#">
 					<button>Ver Producto</button>
@@ -48,8 +48,8 @@
 		</article>	
 		<article>
 			<ul>
-				<li><h2>Nerdos</h2></li>
-				<li><img src="http://localhost:8085/bck_ecommerce_/vistas/img/productos/destacado_1.png" alt=""></li>
+				<li><h2>Mosca</h2></li>
+				<li><img src="http://localhost:8085/bck_ecommerce_/vistas/img/productos/destacado_3.png" alt=""></li>
 				<li><p>Estos son los mismisimos de Clark Kent</p></li>
 				<li><a href="#">
 					<button>Ver Producto</button>
@@ -58,8 +58,8 @@
 		</article>	
 		<article>
 			<ul>
-				<li><h2>Nerdos</h2></li>
-				<li><img src="http://localhost:8085/bck_ecommerce_/vistas/img/productos/destacado_1.png" alt=""></li>
+				<li><h2>La tia</h2></li>
+				<li><img src="http://localhost:8085/bck_ecommerce_/vistas/img/productos/destacado_4.png" alt=""></li>
 				<li><p>Estos son los mismisimos de Clark Kent</p></li>
 				<li><a href="#">
 					<button>Ver Producto</button>
